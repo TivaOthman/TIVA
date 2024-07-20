@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Cruies</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="BookingCruies.css">
+</head>
+<body>
+  <div id="wrapper">
+
+
+         <!-- Header -->
+      <header id="header">
+        <h1>MARINE DIVERRSITY</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="Discover.html">Discover</a></li>
+            <li><a href="Travel.html">Travel Tips</a></li>
+            <li><a href="Activity.html">Activity</a></li>
+            <li><a href="Cruies.html">Cruise</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="Profile.html"><img src="user(2).png"></a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+<form action="reservation.php" method="post">
+
+  <div class="elem-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="visitor_name"  pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Your E-mail</label>
+    <input type="email" id="email" name="visitor_email"  required>
+  </div>
+  <div class="elem-group">
+    <label for="phone">Your Phone</label>
+    <input type="tel" id="phone" name="visitor_phone"  pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+  </div>
+  <hr>
+  <div class="elem-group inlined">
+    <label for="adult">Adults</label>
+    <input type="number" id="adult" name="total_adults"  min="1" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="child">Children</label>
+    <input type="number" id="child" name="total_children"  min="0" required>
+  </div>
+  <div class="elem-group">
+    <label for="checkin-date">Reserve Date</label>
+    <input type="date" id="checkin-date" name="checkin" required>
+  </div>
+<hr>
+            
+<div class="elem-group">
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" required>
+          </div>
+          <div class="elem-group">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" required>
+</div>
+  <div class="elem-group inlined">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" required>
+</div>
+  <div class="elem-group inlined">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" required>
+              </div>
+                <div class="elem-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" required>
+              </div>
+  <hr>
+  <div class="elem-group">
+    <label for="message">Anything Else?</label>
+    <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+  </div>
+  <button type="submit"><a href="#" onclick="alert('The Booking is successful');">Book Now</a> </button>
+</form>
+
+
+</body>
+</html>
